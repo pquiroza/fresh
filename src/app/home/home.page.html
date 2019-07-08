@@ -1,14 +1,37 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+<ion-slides pager="true">
+  <ion-slide>
+  <ion-grid>
+    <h1>Fresh Lexia App</h1>
+    <p>La aplicación que lleva los productos directo del productor a tu casa</p>
+       <ion-button shape="round" color="primary" fill="outline" (click)=skipIntro()>
+        Continuar
+        <ion-icon name="arrow-forward"></ion-icon>
+      </ion-button>
+  </ion-grid>
+  </ion-slide>
+
+  <ion-slide>
+    <ion-grid>
+    <h1>Fresh Lexia App</h1>
+    <p>Contacta a cientos de pequeños productores y compra directamente sus productos orgánicos y frescos en la puerta de tu casa</p>
+       <ion-button shape="round" color="primary" fill="outline" (click)=skipIntro()>
+        Continuar
+        <ion-icon name="arrow-forward"></ion-icon>
+      </ion-button>
+  </ion-grid>
+  </ion-slide>
+
+  <ion-slide>
+    <ion-grid>
+    <h1>Fresh Lexia App</h1>
+    <p>Mira en tiempo real los huertos donde se producen y cultivan tus productos</p>
+       <ion-button shape="round" color="primary" fill="outline"  (click)=skipIntro()>
+        Continuar
+        <ion-icon name="arrow-forward"></ion-icon>
+      </ion-button>
+  </ion-grid>
+  </ion-slide>
+</ion-slides>
+
 </ion-content>

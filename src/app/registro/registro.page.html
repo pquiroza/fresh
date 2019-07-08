@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon name="arrow-round-back" left (click)="backLogin()"></ion-icon>
+  
+    <ion-title center>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<ion-item>
+  <ion-label position="floating" >Nombre Completos</ion-label>
+  <ion-input [(ngModel)]="item.nombre"  name="nombre" required></ion-input>
+</ion-item>
+<ion-item> 
+  <ion-label position="floating">Correo Electrónico</ion-label>
+  <ion-input [(ngModel)]="item.email" name="email" required></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating" >Password</ion-label>
+  <ion-input [(ngModel)]="item.password"  type="password" name="password" required></ion-input>
+</ion-item>  
+<ion-item>
+  <ion-label position="floating">Password</ion-label>
+  <ion-input [(ngModel)]="item.password2" type="password" name="password2" required></ion-input>
+</ion-item>  
+  
+	  <ion-button block (click)=registro() expand="block">Registro</ion-button>
+	
+
+</ion-content>

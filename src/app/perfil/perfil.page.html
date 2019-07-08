@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Perfil</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="true"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-item>
+        <ion-avatar slot="start">
+                  <ion-img src="{{usuario.foto}}"></ion-img>
+
+        </ion-avatar>
+     <ion-label>{{usuario.nombre}}</ion-label>
+    </ion-item>
+
+        
+        <ion-item>
+  <ion-icon color="primary" name="mail" item-start></ion-icon>
+  <ion-input disabled="true" [(ngModel)]="item.email"  value="{{usuario.email}}" ></ion-input>
+</ion-item>
+        <ion-item>
+  <ion-icon color="primary" name="logo-whatsapp"  item-start></ion-icon>
+  <ion-input [(ngModel)]="item.telefono" placeholder="Numero de Telefono" value="{{usuario.telefono}}"></ion-input>
+</ion-item>
+        <ion-item>
+  <ion-icon  color="primary" name="home"  item-start></ion-icon>
+  <ion-input [(ngModel)]="item.direccion" placeholder="Direccion" value="{{usuario.direccion}}"></ion-input>
+</ion-item>
+        <ion-item>
+  <ion-icon  color="primary" name="map"  item-start></ion-icon>
+  <ion-input placeholder="Comuna" [(ngModel)]="item.comuna" value="{{usuario.comuna}}"></ion-input>
+</ion-item>
+
+    	  <ion-button block (click)=updatePerfil() expand="block">Actualizar</ion-button>
+
+
+
+
+</ion-content>

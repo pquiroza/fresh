@@ -1,3 +1,29 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+    <ion-menu contentId="content1" side="start" type="push">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Fresh Lexia App</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+ <ion-content>
+    <ion-list>
+      <ion-menu-toggle   >
+        <ion-item (click)="home()"><ion-icon name="home" item-start></ion-icon>Home</ion-item>
+        <ion-item (click)="comprar()"><ion-icon name="cart" item-start></ion-icon>Comprar</ion-item>
+        <ion-item (click)="huertos()"><ion-icon name="flower" item-start></ion-icon>Ver Huertos</ion-item>
+        <ion-item (click)="pedidos()"><ion-icon name="basket" item-start></ion-icon>Mis Pedidos</ion-item>
+        <ion-item (click)="mensajes()"><ion-icon name="mail" item-start></ion-icon>Mensajes</ion-item>
+                <ion-item (click)="perfil()"><ion-icon name="person" item-start></ion-icon>Perfil</ion-item>
+
+        <ion-item (click)="logout()"><ion-icon name="power" item-start></ion-icon>Logout</ion-item>
+
+
+      </ion-menu-toggle>
+
+
+    </ion-list>
+  </ion-content>    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="content1"></ion-router-outlet>
 </ion-app>

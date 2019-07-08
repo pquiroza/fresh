@@ -1,0 +1,104 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Comprar</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="true"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<ion-segment (ionChange)="segmentChanged($event)" [(ngModel)]="comprasegment">
+<ion-segment-button value="productos" checked>
+<ion-label>Productos</ion-label>
+
+</ion-segment-button>
+<ion-segment-button value="huertos" checked>
+<ion-label>Huertos</ion-label>
+</ion-segment-button>
+</ion-segment>
+
+
+
+<div [ngSwitch]="comprasegment">
+
+<div *ngSwitchDefault>
+  <ion-searchbar  showCancelButton cancelButtonText="Custom Cancel"></ion-searchbar>
+  <ion-list>
+    <ion-item>
+      <ion-label>Papas</ion-label>
+   <ion-note>6</ion-note>
+      </ion-item>
+      <ion-item>
+        <ion-label>Frutillas</ion-label>
+     <ion-note>12</ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-label>Castañas</ion-label>
+       <ion-note>3</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label>Choclo</ion-label>
+         <ion-note>22</ion-note>
+            </ion-item>
+            <ion-item>
+              <ion-label>Manzanas</ion-label>
+           <ion-note>7</ion-note>
+              </ion-item>
+              <ion-item>
+                <ion-label>Moras</ion-label>
+             <ion-note>4</ion-note>
+                </ion-item>
+    </ion-list>
+  </div>
+
+  <div *ngSwitchCase="'productos'">
+  <ion-searchbar  showCancelButton cancelButtonText="Custom Cancel"></ion-searchbar>
+  <ion-list>
+    <ion-item>
+      <ion-label>Papas</ion-label>
+   <ion-note>6</ion-note>
+      </ion-item>
+      <ion-item>
+        <ion-label>Frutillas</ion-label>
+     <ion-note>12</ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-label>Castañas</ion-label>
+       <ion-note>3</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label>Choclo</ion-label>
+         <ion-note>22</ion-note>
+            </ion-item>
+            <ion-item>
+              <ion-label>Manzanas</ion-label>
+           <ion-note>7</ion-note>
+              </ion-item>
+              <ion-item>
+                <ion-label>Moras</ion-label>
+             <ion-note>4</ion-note>
+                </ion-item>
+    </ion-list>
+</div>
+
+  <div *ngSwitchCase="'huertos'">
+    <ion-searchbar  showCancelButton cancelButtonText="Custom Cancel"></ion-searchbar>
+    <ion-list>
+      <ion-item>
+        <ion-label>Huerto Doña Juanita</ion-label>
+     <ion-note>6 productos</ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-label>Fundo Don Juan</ion-label>
+       <ion-note>1 producto</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label>Fundo Santa Rosa</ion-label>
+         <ion-note>9 produtos</ion-note>
+            </ion-item>
+
+      </ion-list>
+  </div>
+</div>
+</ion-content>

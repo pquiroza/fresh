@@ -1,0 +1,46 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+<ion-item> 
+  <ion-label position="floating">Correo Electrónico</ion-label>
+  <ion-input [(ngModel)]="item.email" name="email" required></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating" >Password</ion-label>
+  <ion-input [(ngModel)]="item.password"  type="password" name="password" required></ion-input>
+</ion-item>  
+    	  <ion-button block (click)=login() expand="block">Login</ion-button>
+
+
+
+  <p class="slide-title">Si no tienes una cuenta puedes registrarte <b (click)="goRegistro()">Aquí</b>.  Tambien puedes registrarte con cuentas de redes sociales</p>
+
+  
+  <p class="slide-title"> Registro con Redes Sociales </p>
+  <ion-button icon-start expand="block" (click)="facebookLogin()" >
+    <ion-icon name="logo-facebook"></ion-icon>
+    Facebook
+  </ion-button>
+    <ion-button icon-start  expand="block"  (click)="twitterLogin()" >
+    <ion-icon name="logo-twitter"></ion-icon>
+    Twitter
+  </ion-button>
+  
+    
+    <ion-button icon-start expand="block" (click)="googleLogin()">
+    <ion-icon name="logo-google"></ion-icon>
+    Google
+  </ion-button>
+</ion-content>

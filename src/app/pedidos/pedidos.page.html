@@ -1,0 +1,158 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Mis Pedidos</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="true"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-segment (ionChange)="segmentChanged($event)" [(ngModel)]="pedidosSegment">
+  <ion-segment-button value="pendientes" checked>
+  <ion-label>Pendientes</ion-label>
+
+  </ion-segment-button>
+  <ion-segment-button value="entregados" checked>
+  <ion-label>Entregados</ion-label>
+  </ion-segment-button>
+  </ion-segment>
+
+
+
+<div [ngSwitch]="pedidosSegment">
+  <div *ngSwitchCase="'entregados'">
+    <ion-list>
+      <ion-list-header text-wrap>
+  <ion-label>Entregas Pendientes</ion-label>
+</ion-list-header>
+      <ion-item>
+        <ion-icon name="checkmark" slot="start"></ion-icon>
+        <ion-label text-justify>
+            3 Kg Papas <br>Huerto Doña Juanita
+
+          </ion-label>
+
+        <ion-note slot="end">
+          ETA: 31 Enero
+          </ion-note>
+
+        </ion-item>
+        <ion-item>
+          <ion-icon name="checkmark" slot="start"></ion-icon>
+          <ion-label text-justify>
+              2 Kg Frutillas <br>Fundo Don Juan
+
+            </ion-label>
+
+          <ion-note slot="end">
+            ETA: 1 Febrero
+            </ion-note>
+
+          </ion-item>
+          <ion-item>
+            <ion-icon name="checkmark" slot="start"></ion-icon>
+            <ion-label text-justify>
+                2 Kg Tomate <br>Don Jaime
+
+              </ion-label>
+
+            <ion-note slot="end">
+              ETA: 2 Febrero
+              </ion-note>
+
+            </ion-item>
+      </ion-list>
+
+    </div>
+  <div *ngSwitchCase="'pendientes'">
+    <ion-list>
+      <ion-list-header text-wrap>
+  <ion-label>Entregas Pendientes</ion-label>
+</ion-list-header>
+      <ion-item>
+        <ion-icon name="bicycle" slot="start"></ion-icon>
+        <ion-label text-justify>
+            3 Kg Papas <br>Huerto Doña Juanita
+
+          </ion-label>
+
+        <ion-note slot="end">
+          ETA: 31 Enero
+          </ion-note>
+
+        </ion-item>
+        <ion-item>
+          <ion-icon name="bicycle" slot="start"></ion-icon>
+          <ion-label text-justify>
+              2 Kg Frutillas <br>Fundo Don Juan
+
+            </ion-label>
+
+          <ion-note slot="end">
+            ETA: 1 Febrero
+            </ion-note>
+
+          </ion-item>
+          <ion-item>
+            <ion-icon name="bicycle" slot="start"></ion-icon>
+            <ion-label text-justify>
+                2 Kg Tomate <br>Don Jaime
+
+              </ion-label>
+
+            <ion-note slot="end">
+              ETA: 2 Febrero
+              </ion-note>
+
+            </ion-item>
+      </ion-list>
+
+    </div>
+  <div *ngSwitchDefault>
+    <ion-list>
+      <ion-list-header text-wrap>
+  <ion-label>Entregas Pendientes</ion-label>
+</ion-list-header>
+      <ion-item>
+        <ion-icon name="bicycle" slot="start"></ion-icon>
+        <ion-label text-justify>
+            3 Kg Papas <br>Huerto Doña Juanita
+
+          </ion-label>
+
+        <ion-note slot="end">
+          ETA: 31 Enero
+          </ion-note>
+
+        </ion-item>
+        <ion-item>
+          <ion-icon name="bicycle" slot="start"></ion-icon>
+          <ion-label text-justify>
+              2 Kg Frutillas <br>Fundo Don Juan
+
+            </ion-label>
+
+          <ion-note slot="end">
+            ETA: 1 Febrero
+            </ion-note>
+
+          </ion-item>
+          <ion-item>
+            <ion-icon name="bicycle" slot="start"></ion-icon>
+            <ion-label text-justify>
+                2 Kg Tomate <br>Don Jaime
+
+              </ion-label>
+
+            <ion-note slot="end">
+              ETA: 2 Febrero
+              </ion-note>
+
+            </ion-item>
+      </ion-list>
+    </div>
+
+  </div>
+
+</ion-content>
