@@ -18,14 +18,6 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 
-  var config = {
-    apiKey: "AIzaSyAdyIuubgeOZheLacrYO7WWdkrnT5Sr-p8",
-    authDomain: "fresh-2637d.firebaseapp.com",
-    databaseURL: "https://fresh-2637d.firebaseio.com",
-    projectId: "fresh-2637d",
-    storageBucket: "fresh-2637d.appspot.com",
-    messagingSenderId: "861287988826"
-  };
 
 firebase.initializeApp(config);
 
